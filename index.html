@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="../Snapchat/Snapchat-536844492.jpg" />
+    <link rel="stylesheet" href="../htdocs/Library/bootstrap-5.2.0-dist/css/bootstrap.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../htdocs/Library/bootstrap-5.2.0-dist/css/w3.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../htdocs/Library/fontawesome-free-6.1.2-web/css/all.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../htdocs/Library/font.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../htdocs/Library/eruda.js" type="text/css" media="all" />
+    <script src="../htdocs/Library/bootstrap-5.2.0-dist/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../htdocs/Library/bootstrap-5.2.0-dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../htdocs/Library/sweetalert.min.js" type="text/javascript" charset="utf-8"></script>
+    <title>Music Player 3</title>
+  </head>
+  <body>
+    <div class="container">
+      <audio id="aud"></audio>
+      <img class="border p-1 rounded d-block mx-auto mt-3" src="../Snapchat/Snapchat-1935703421.jpg" width="300px" height="300px" id="cover" style="object-fit:covers" />
+      <div class="form-check form-switch position-absolute mt-3 ms-3">
+        <input type="checkbox" name="darkMode" class="form-check-input" id="darkMode" />
+        <label class="form-check-label">Dark Mode</label>
+      </div>
+      <div class="music-title text-center fw-bold fs-5 mt-5">
+        Music Title
+      </div>
+      <div class="music-artist text-center text-muted fw-bold">
+        Itz SA MI M
+      </div>
+      <div class="progress mt-5 mx-auto" style="height:3px;width:90%">
+        <div class="progress-bar progress-bar-striped"></div>
+      </div>
+      <div class="d-flex justify-content-between mx-auto" style="width:90%;font-size:12px">
+        <b id="music-time">00:00</b>
+        <b id="music-dur">00:00</b>
+      </div>
+      <div class="d-flex align-items-center justify-content-between mx-auto mt-3" style="font-size:30px;width:90%">
+        <div>
+          <i class="fas fa-random"></i>
+        </div>
+        <div id="musicPrev">
+          <i class="fas fa-fast-backward"></i>
+        </div>
+        <div style="font-size:38px" id="music-control">
+          <i class="fas fa-play-circle"></i>
+        </div>
+        <div onclick="musicNext()">
+          <i class="fas fa-fast-forward"></i>
+        </div>
+        <div data-bs-toggle="modal" data-bs-target="#myModal">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="form-group">
+                <form id="myForm">
+                  <label>Upload Music</label>
+                  <input type="file" accept="audio/*" name="file" id="file" class="form-control" multiple required />
+                  <button type="submit" class="btn btn-primary mt-2">Upload</button>
+                </form>
+              </div>
+            </div>
+            <div class="modal-body">
+              <ul class="list-group">
+                <!--<li class="list-group-item d-flex justify-content-between align-items-center">Samim Sarkar <button class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></button></li>-->
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <script src="../htdocs/Library/eruda.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../htdocs/Library/consoles.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../htdocs/Library/localforage.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
